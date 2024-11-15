@@ -1,0 +1,35 @@
+{
+    "categories": [
+      { "id": 1, "name": "Clássicos" },
+      { "id": 2, "name": "Especiais" }
+    ],
+    
+      "burgers": [
+        {
+          "id": 1,
+          "name": "X-Vegan",
+          "ingredients": ["Pão", "Carne", "Queijo", "Alface", "Tomate"],
+          "image":  "assets/hamburguer.png",
+          "price": 15.99,
+          "categoryId": 1
+        },
+        {
+          "id": 2,
+          "name": "X-Fitnnes",
+          "ingredients": ["Pão", "Carne", "Queijo", "Cebola Caramelizada"],
+          "image":  "assets/hamburguer.png",
+          "price": 18.99,
+          "categoryId": 1
+        },
+        {
+          "id": 3,
+          "name": "X-Infarto",
+          "ingredients": ["Pão", "Hambúrguer Vegetal", "Alface", "Tomate"],
+          "image": "assets/hamburguer.png",
+          "price": 14.99,
+          "categoryId": 2
+        }
+      ]
+    
+    
+  }

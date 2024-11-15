@@ -1,0 +1,57 @@
+.home-container {
+    text-align: center;
+    padding-top: 20px;
+  }
+  
+  .home-content {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Centraliza todos os elementos dentro de home-content */
+  }
+  
+  .home-content h1 {
+    font-size: 2.5rem;
+    color: #521D16;
+  }
+  
+  .home-content p {
+    font-size: 1.2rem;
+    color: #521D16;
+    margin: 20px 0;
+  }
+  
+  .buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #ED0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #521D16; /* Cor ao passar o mouse */
+  }
+  
+  .banner {
+    width: 836px;
+    height: 442px;
+    margin: 0 auto; /* Centraliza o banner horizontalmente */
+  }
+  
+  .banner img {
+    width: 100%;  /* Garante que a imagem se ajuste à largura do banner */
+    height: 100%; /* Garante que a imagem se ajuste à altura do banner */
+    object-fit: cover; /* Mantém a imagem proporcional, cortando se necessário */
+  }
+  

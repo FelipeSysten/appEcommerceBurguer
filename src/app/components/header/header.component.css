@@ -1,0 +1,34 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+    padding: 1rem 2rem;
+  }
+  
+  .logo {
+    flex: 0 0 auto; /* Fixar o tamanho da logo */
+    margin-right: 2rem; /* Ajustar a distância entre a logo e os menus */
+  }
+  
+  .logo img {
+    max-height: 40px; /* Reduzir o tamanho da logo */
+  }
+  
+  .nav {
+    display: flex;
+    gap: 4rem; /* Aumentar o espaçamento entre os itens do menu */
+    flex: 2; /* Ocupa o espaço restante */
+    justify-content: flex-end; /* Alinha os itens à esquerda */
+  }
+  
+  .nav a {
+    color: #521D16;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .nav a:hover {
+    color: var(--primary-color);
+  }
+  

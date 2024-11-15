@@ -1,0 +1,28 @@
+<div class="menu-container">
+    <h1 class="menu-title">Nosso Cardápio</h1>
+    
+    <!-- Verifica se há burgers -->
+    <div class="menu-grid">
+      <div 
+        class="card" 
+        *ngFor="let burger of burgers"
+      >
+        <img 
+          [src]="burger.image" 
+          [alt]="burger.name" 
+          class="card-img"
+        />
+        <h2 class="card-title">{{ burger.name }}</h2>
+        <p class="card-ingredients">{{ burger.ingredients }}</p>
+      </div>
+    </div>
+  
+    <!-- Exibe mensagem se não houver burgers -->
+    <p *ngIf="burgers.length === 0" class="no-burgers">Nenhum hambúrguer disponível no momento.</p>
+
+    <div class="buttons-container">
+      
+      <button routerLink="/menu" class="btn-menu">Ver Cardápio Completo</button>
+    </div>
+  </div>
+  
