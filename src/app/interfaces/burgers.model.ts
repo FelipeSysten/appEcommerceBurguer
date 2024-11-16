@@ -4,5 +4,6 @@ export interface Burgers {
     ingredients: string[];    // Lista de ingredientes
     image: string;            // URL da imagem do hambúrguer
     price: number;            // Preço do hambúrguer
+    categoryId:number;
   }
   
