@@ -45,7 +45,7 @@ Este projeto é um **Sistema de Pedido** desenvolvido com **Angular** utilizando
 
 2. Instale as dependências::
    ```bash
-  npm install
+   npm install
 
 3. Inicie o servidor de desenvolvimento:
    ```bash
@@ -59,7 +59,7 @@ Certifique-se de que o arquivo db.json esteja configurado corretamente no diret�
 
 4. Acesse a aplicação no navegador:
 
- http://localhost:4200
+   http://localhost:4200
 
  ## **Uso**
 
@@ -98,17 +98,17 @@ Certifique-se de que o arquivo db.json esteja configurado corretamente no diret�
 
 2. Crie uma branch com sua feature/bugfix:
    ```bash
-  npm install
+    npm install
 
 3. Faça as alterações desejadas e commit:
    ```bash
-  git commit -m "Minha nova feature"
+    git commit -m "Minha nova feature"
 
 4. Envie para o repositório remoto:
    ```bash
    git push origin minha-feature
 
-   4. Abra um Pull Request para revisão.
+5. Abra um Pull Request para revisão.
 
    
  ## **Licença**
@@ -117,7 +117,7 @@ Certifique-se de que o arquivo db.json esteja configurado corretamente no diret�
 
   ## **Autor**
 
-  Desenvolvido por Seu Felipe Souza.
+Desenvolvido por Seu Felipe Souza.
 Sinta-se à vontade para entrar em contato para sugestões ou dúvidas! 🚀
 
 
