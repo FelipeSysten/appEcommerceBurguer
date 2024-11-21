@@ -1,21 +1,19 @@
 
 <h2 class="title">DETALHES</h2> <!-- Título da página -->
 
-<div class="details-container" *ngIf="produto; else notFound">
+<div class="details-container" *ngIf="burgers; else notFound">
   <!-- Exibe detalhes do produto se 'produto' existir -->
 
   <div class="card-container">
     <!-- Cartão do produto -->
-    <app-card
-      >
-    </app-card>
+    <app-card-padrao *ngFor="let burger of filteredBurgers" [burger]="burger" [categorias]="categorias" [nome]="burger.name"></app-card-padrao>
   </div>
 
   <div class="description-container">
     <!-- Descrição do produto -->
     <app-description
       [title]="'Descrição'"
-      [text]="'burger.description_text'">
+     >
     </app-description>
   </div>
 </div>

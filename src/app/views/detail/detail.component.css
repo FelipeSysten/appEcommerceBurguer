@@ -32,3 +32,11 @@
   h2{
     margin-right: 8%;
   }
+
+  ng-template p {
+    color: #ED1B00; /* Cor de texto visível */
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: bold;
+  }
+  

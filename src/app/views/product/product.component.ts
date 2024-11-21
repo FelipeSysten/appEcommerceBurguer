@@ -4,15 +4,15 @@ import { Burgers } from '../../interfaces/burgers.model';
 import { CategoriasService } from '../../services/categorias.service';
 import { BurgersService } from '../../services/burgers.service';
 import { Categorias } from '../../interfaces/categorias.model';
-import { CardComponent } from '../../components/card/card.component';
 import { CommonModule } from '@angular/common';
 import { CategoriaComponent } from "../categoria/categoria.component";
 import { ButtonComponent } from "../../components/button/button.component";
+import { CardPadraoComponent } from "../../components/card-padrao/card-padrao.component";
 
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [CardComponent, CommonModule, CategoriaComponent, ButtonComponent],
+  imports: [ CommonModule, CategoriaComponent, ButtonComponent, CardPadraoComponent],
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css']
 })
@@ -70,4 +70,9 @@ export class ProductComponent implements OnInit {
  toggleMenu() {
   this.showAll = !this.showAll; // Se estiver visível, oculta; se estiver oculto, mostra
 }
+
+  // Navegar para a página de produtos filtrados por categoria
+  navigateToCategory(categoryId: number): void {
+    this.router.navigate(['/detail', categoryId]);
+  }
 }

@@ -18,6 +18,7 @@ export class CardComponent implements OnInit {
   
    // Variáveis de entrada para o componente, com valores padrões
    @Input() title: string = ''; 
+   @Input() nome: string = ''; 
    @Input() description: string = ''; 
    @Input() descriptionText: string = ''; // Alteração no nome para seguir o padrão camelCase
    @Input() imageUrl: string = ''; 
@@ -37,4 +38,5 @@ export class CardComponent implements OnInit {
     const category = this.categorias.find(categoria => categoria.id === categoryId);
     return category ? category.name : 'Sem Categoria';
   }
+  
 }

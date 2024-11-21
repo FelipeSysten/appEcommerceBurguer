@@ -1,1 +1,9 @@
-<p>card-padrao works!</p>
+<div class="burger-card">
+  <img 
+    [src]="burger.image" 
+    [alt]="burger.name" 
+    class="card-img"
+  />
+  <h2 class="card-name">{{ burger.name }}</h2>
+  <p class="card-ingredients">{{ burger.ingredients }}</p>
+</div>

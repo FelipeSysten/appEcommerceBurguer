@@ -32,11 +32,11 @@ export const routes: Routes = [
         title:'ProdutoId'
     },
 
-    {   path: 'detail', 
+    {   path: 'detail/:id', 
         component: DetailComponent,
         title:'Detalhes'
     },
-    
+
     {   path: 'order', 
         component: OrderComponent,
         title:'Pedido'

@@ -40,3 +40,12 @@
     margin-top: 20px;
   }
   
+
+  
+  .form-label {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #000; /* Cor preta */
+    margin-bottom: 5px; /* Espaço entre a label e o campo */
+    display: block; /* Garante que a label ocupe uma linha completa */
+  }
