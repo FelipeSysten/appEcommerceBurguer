@@ -1,7 +1,7 @@
 # **Sistema de Pedido com Angular**
 
 Link da aplicação
-burguermania-chi.vercel.app
+[burguermania-chi.vercel.app](https://burguermania-chi.vercel.app/)
 
 Este projeto é um **Sistema de Pedido** desenvolvido com **Angular** utilizando **Componentes Reutilizáveis**. A aplicação permite preencher informações de produtos, suas quantidades e observações, com um design responsivo e estilizado.
 
