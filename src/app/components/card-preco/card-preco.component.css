@@ -33,6 +33,10 @@
     font-size: 0.9rem;
     color: #444;
   }
+
+  .card-price{
+    color: #444;
+  }
   
   .burger-grid {
     display: flex;

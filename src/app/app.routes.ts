@@ -5,6 +5,8 @@ import { CategoriaComponent } from './views/categoria/categoria.component';
 import { ProductComponent } from './views/product/product.component';
 import { DetailComponent } from './views/detail/detail.component';
 import { OrderComponent } from './views/order/order.component';
+import { LocationComponent } from './views/location/location.component';
+import { ContactComponent } from './views/contact/contact.component';
 
 
 export const routes: Routes = [
@@ -40,6 +42,16 @@ export const routes: Routes = [
     {   path: 'order', 
         component: OrderComponent,
         title:'Pedido'
+    },
+
+    {   path: 'location', 
+        component: LocationComponent,
+        title:'Localização'
+    },
+
+    {   path: 'contact', 
+        component: ContactComponent,
+        title:'Contato'
     }
 
 ];

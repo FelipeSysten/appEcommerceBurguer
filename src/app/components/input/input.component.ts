@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // Importação necessária
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-input',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './input.component.html',
   styleUrl: './input.component.css'
 })
