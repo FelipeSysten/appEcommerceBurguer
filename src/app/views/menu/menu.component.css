@@ -34,3 +34,7 @@ button:hover {
   background-color: #521d16;
   transform: scale(1.05);
 }
+
+.burger-card:hover{
+  transform: scale(1.05);
+}

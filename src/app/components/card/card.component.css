@@ -1,5 +1,3 @@
-
-
 .card {
   background-color: #ffffff;
   width: 200px;
@@ -8,12 +6,14 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: transform 0.3s ease, border 0.3s ease; /* Suaviza a transição de transformação e borda */
+  border: none; /* Garantindo que o card não tenha borda */
 }
-
 
 .card:hover {
   transform: scale(1.05); /* Leve aumento no hover */
- 
+  border: none; /* Garantindo que não haja borda ao passar o mouse */
+  box-shadow: none; /* Garantindo que não haja sombra ao passar o mouse */
 }
 
 .card-img {
@@ -45,11 +45,9 @@
   background-color: #ffffff;
   width: 220px;
   padding: 15px;
-
- 
   text-align: center;
+  border: none; /* Removendo borda do card */
 }
-
 
 .buttons-container {
   display: flex;
