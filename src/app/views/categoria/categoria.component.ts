@@ -16,7 +16,9 @@ import { RouterLink } from '@angular/router';
 export class CategoriaComponent   implements OnInit {
   categorias: Categorias[] = []; // Lista de categorias
   burgers: Burgers[] = []; // Lista de hambúrgueres
-  filteredBurgers: Burgers[] = []; // Hambúrgueres filtrados pela categoria
+  filteredBurgers: Burgers[] = []; // Hambúrgueres filtrados pela 
+  
+  
 
   constructor(
     private categoriaService: CategoriasService,

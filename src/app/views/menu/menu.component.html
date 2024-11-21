@@ -1,28 +1,23 @@
-<div class="menu-container">
-    <h1 class="menu-title">Nosso Cardápio</h1>
-    
-    <!-- Verifica se há burgers -->
-    <div class="menu-grid">
-      <div 
-        class="card" 
-        *ngFor="let burger of burgers"
-      >
-        <img 
-          [src]="burger.image" 
-          [alt]="burger.name" 
-          class="card-img"
-        />
-        <h2 class="card-title">{{ burger.name }}</h2>
-        <p class="card-ingredients">{{ burger.ingredients }}</p>
+<div>
+  <h1 class="menu-title">CARDÁPIO</h1>
+  <div class="burger-grid">
+    <div class="container-burguer">
+      <div class="burger-card" *ngFor="let burger of (showAll ? burgers : burgers.slice(0, 3))">
+        <app-card
+          (click)="navigateToCategory(burger.categoryId)"
+          [burger]="burger"
+          [categorias]="categorias"
+          [title]="getCategoryTitle(burger.category)">
+        </app-card> <!-- Correção feita aqui -->
       </div>
     </div>
-  
-    <!-- Exibe mensagem se não houver burgers -->
-    <p *ngIf="burgers.length === 0" class="no-burgers">Nenhum hambúrguer disponível no momento.</p>
-
-    <div class="buttons-container">
-      
-      <button routerLink="/menu" class="btn-menu">Ver Cardápio Completo</button>
-    </div>
   </div>
-  
+  <div class="buttons-container">
+    <app-button 
+      [label]="showAll ? 'MOSTRAR MENOS' : 'VER CARDÁPIO COMPLETO'" 
+      type="filled" 
+      size="large" 
+      (click)="toggleMenu()">
+    </app-button>
+  </div>
+</div>

@@ -5,37 +5,62 @@ import { Categorias } from '../interfaces/categorias.model';
   providedIn: 'root'
 })
 export class CategoriasService {
+  url = 'http://localhost:3000/categories'; // URL do json-server
 
-  url = 'http://localhost:3000/categories'; // URL do json-serve
+  constructor() {}
 
-  constructor() { }
-
-   // Método para buscar todos os burger
-   async getAllCategorias(): Promise<Categorias[]>{
-    const response = await fetch(this.url);
-    return response.json();
-  }
-
-    // Método para buscar um burger pelo ID
-    async getCategoriaById(id: number): Promise<Categorias | undefined>{
-      const response = await fetch(`${this.url}/${id}`);
-      return response.json();
+  // Método para buscar todas as categorias
+  async getAllCategorias(): Promise<Categorias[]> {
+    try {
+      const response = await fetch(this.url);
+      if (!response.ok) {
+        throw new Error('Erro ao buscar categorias.');
+      }
+      return await response.json();
+    } catch (error) {
+      console.error('Erro ao buscar todas as categorias:', error);
+      return [];
     }
-
-    // Método para adicionar um burger
-  async addCategoria(categoria: Categorias): Promise<Categorias> {
-    const response = await fetch(this.url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(categoria)
-    });
-    return response.json();
   }
 
-    // Método para atualizar um burger existente
-    async updateCategoria(id: number, categoria: Categorias): Promise<Categorias> {
+  // Método para buscar uma categoria pelo ID
+  async getCategoriaById(id: number): Promise<Categorias | undefined> {
+    try {
+      const response = await fetch(`${this.url}/${id}`);
+      if (!response.ok) {
+        console.warn(`Categoria com ID ${id} não encontrada.`);
+        return undefined;
+      }
+      return await response.json();
+    } catch (error) {
+      console.error(`Erro ao buscar a categoria com ID ${id}:`, error);
+      return undefined;
+    }
+  }
+
+  // Método para adicionar uma nova categoria
+  async addCategoria(categoria: Categorias): Promise<Categorias> {
+    try {
+      const response = await fetch(this.url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(categoria)
+      });
+      if (!response.ok) {
+        throw new Error('Erro ao adicionar categoria.');
+      }
+      return await response.json();
+    } catch (error) {
+      console.error('Erro ao adicionar categoria:', error);
+      throw error;
+    }
+  }
+
+  // Método para atualizar uma categoria existente
+  async updateCategoria(id: number, categoria: Categorias): Promise<Categorias> {
+    try {
       const response = await fetch(`${this.url}/${id}`, {
         method: 'PUT',
         headers: {
@@ -43,15 +68,28 @@ export class CategoriasService {
         },
         body: JSON.stringify(categoria)
       });
-      return response.json();
+      if (!response.ok) {
+        throw new Error('Erro ao atualizar categoria.');
+      }
+      return await response.json();
+    } catch (error) {
+      console.error(`Erro ao atualizar a categoria com ID ${id}:`, error);
+      throw error;
     }
-
-    
-   // Método para excluir um burger pelo ID
-   async deleteCategoria(id: number): Promise<void> {
-    await fetch(`${this.url}/${id}`, {
-      method: 'DELETE'
-    });
   }
 
+  // Método para excluir uma categoria pelo ID
+  async deleteCategoria(id: number): Promise<void> {
+    try {
+      const response = await fetch(`${this.url}/${id}`, {
+        method: 'DELETE'
+      });
+      if (!response.ok) {
+        throw new Error('Erro ao excluir categoria.');
+      }
+    } catch (error) {
+      console.error(`Erro ao excluir a categoria com ID ${id}:`, error);
+      throw error;
+    }
+  }
 }

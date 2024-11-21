@@ -2,6 +2,9 @@ import { Routes } from '@angular/router';
 import { MenuComponent } from './views/menu/menu.component';
 import { HomeComponent } from './views/home/home.component';
 import { CategoriaComponent } from './views/categoria/categoria.component';
+import { ProductComponent } from './views/product/product.component';
+import { DetailComponent } from './views/detail/detail.component';
+import { OrderComponent } from './views/order/order.component';
 
 
 export const routes: Routes = [
@@ -22,6 +25,21 @@ export const routes: Routes = [
     {   path: 'categoria', 
         component: CategoriaComponent,
         title:'Categoria'
+    }, 
+
+    {   path: 'products/:id', 
+        component: ProductComponent,
+        title:'ProdutoId'
+    },
+
+    {   path: 'detail', 
+        component: DetailComponent,
+        title:'Detalhes'
+    },
+    
+    {   path: 'order', 
+        component: OrderComponent,
+        title:'Pedido'
     }
 
 ];

@@ -8,10 +8,21 @@
     <img src="assets/banner.png" alt="Banner BurguerMania" />
   </div>
   
+
+    
+
       <!-- Botões -->
       <div class="buttons-container">
-        <button routerLink="/pedido" class="btn-order">Fazer Pedido</button>
-        <button routerLink="/menu" class="btn-menu">Acessar Cardápio</button>
+      <app-button
+      label="Fazer pedido"
+      type="filled"
+      (click)="navigateTo('order')">
+    </app-button>
+    <app-button
+    label="Acessar cardápio"
+    type="outlined"
+    (click)="navigateTo('menu')">
+  </app-button>
       </div>
     </div>
   </div>

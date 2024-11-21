@@ -1,0 +1,31 @@
+
+<h2 class="title">DETALHES</h2> <!-- Título da página -->
+
+<div class="details-container" *ngIf="produto; else notFound">
+  <!-- Exibe detalhes do produto se 'produto' existir -->
+
+  <div class="card-container">
+    <!-- Cartão do produto -->
+    <app-card
+      >
+    </app-card>
+  </div>
+
+  <div class="description-container">
+    <!-- Descrição do produto -->
+    <app-description
+      [title]="'Descrição'"
+      [text]="'burger.description_text'">
+    </app-description>
+  </div>
+</div>
+
+<ng-template #notFound>
+  <!-- Caso o produto não seja encontrado -->
+  <p>Não conseguimos encontrar.</p>
+</ng-template>
+
+<div class="button-container" *ngIf="produto">
+  <!-- Botão para comprar -->
+  <app-button label="COMPRAR" type="filled" (click)="navigateTo('pedido')"></app-button>
+</div>
