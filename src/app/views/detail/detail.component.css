@@ -39,4 +39,26 @@
     text-align: center;
     font-weight: bold;
   }
+
+  .buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #ED0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #521D16; /* Cor ao passar o mouse */
+  }
   

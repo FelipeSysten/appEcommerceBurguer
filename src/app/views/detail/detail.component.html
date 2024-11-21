@@ -6,14 +6,14 @@
 
   <div class="card-container">
     <!-- Cartão do produto -->
-    <app-card-padrao *ngFor="let burger of filteredBurgers" [burger]="burger" [categorias]="categorias" [nome]="burger.name"></app-card-padrao>
+    <app-card-preco *ngFor="let burger of filteredBurgers" [burger]="burger" [categorias]="categorias"  [price]="burger.price"></app-card-preco>
   </div>
 
   <div class="description-container">
     <!-- Descrição do produto -->
-    <app-description
+    <app-description  *ngFor="let burger of filteredBurgers" [burger]="burger" [categorias]="categorias"
       [title]="'Descrição'"
-     >
+      [text]="burger.description_text">
     </app-description>
   </div>
 </div>
@@ -23,7 +23,9 @@
   <p>Não conseguimos encontrar.</p>
 </ng-template>
 
-<div class="button-container" *ngIf="produto">
-  <!-- Botão para comprar -->
-  <app-button label="COMPRAR" type="filled" (click)="navigateTo('pedido')"></app-button>
-</div>
+
+<div class="buttons-container">
+    <app-button
+    label="COMPRAR"
+    type="filled"
+    (click)="navigateTo('order')">

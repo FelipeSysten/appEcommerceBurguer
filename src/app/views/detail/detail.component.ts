@@ -8,12 +8,13 @@ import { DescriptionComponent } from "../../components/description/description.c
 import { ButtonComponent } from "../../components/button/button.component";
 import { CommonModule } from '@angular/common';
 import { CategoriasService } from '../../services/categorias.service';
+import { CardPrecoComponent } from "../../components/card-preco/card-preco.component";
 
 
 @Component({
   selector: 'app-detail',
   standalone: true,
-  imports: [CardPadraoComponent, DescriptionComponent, ButtonComponent, CommonModule],
+  imports: [CardPadraoComponent, DescriptionComponent, ButtonComponent, CommonModule, CardPrecoComponent],
   templateUrl: './detail.component.html',
   styleUrls: ['./detail.component.css'],
   providers: [BurgersService],
@@ -26,7 +27,7 @@ export class DetailComponent implements OnInit {
   categoryId: number | null = null; // Para armazenar o ID da categoria
   showAll: boolean = false;
   produto: Burgers | undefined | null; // Produto selecionado
-
+ 
  
 
   constructor(
